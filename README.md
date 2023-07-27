@@ -11,13 +11,14 @@ It simply selects records from origin databse and inserts them into the destinat
 - Origin database connection
 - Destination database connection
 - Bulk or normal
-
-## Commands
-
-### Table name
-It takes name of the table that it wants to read records from. 
+- Origin table name
+- Destination table name
 
 The table name in the destination database is optional. If it is passed by the user, a table with that name is created but if it had empty value, the name will be the same as table name in the origin database. 
+## Commands
+
+- migrate
+- connection_test
 
 ## Deployment option
 
