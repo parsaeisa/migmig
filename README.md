@@ -25,3 +25,28 @@ It has deployments using `Helm` and it can be easily deployed to your Kubernetes
 ```bash
 helm install migmig .deploy/helm
 ```
+## Upcoming features
+
+**Test connection**
+
+This is a command that checks the connection to databases. 
+
+**Chunkenized migrating**
+
+If the process of migration becaome interrupted the tool must do something. 
+
+Using `limit` & `offset` I should be able to complete the migration in multiple steps. 
+
+## Architecture
+
+It has an interface with two methods:
+```go
+type DatabaseAgent interface {
+  Read() error
+  BulkRead() error
+  Insert() error
+  BulkInsert() error 
+}
+```
+
+This interface can be implemented for any sql databse. The first goal is **MariaDB**.
