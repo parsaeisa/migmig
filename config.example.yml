@@ -1,0 +1,13 @@
+origin_database:
+  address:
+  port:
+  user:
+  password:
+
+deestination_database:
+  address:
+  port:
+  user:
+  password:
+
+bulk: false
